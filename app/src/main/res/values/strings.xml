@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Mr Fever</string>
+    <string name="introduction">Hello! I am Mr Fever.</string>
+    <string name="greeting">Welcome to my app!</string>
+    <string name="sign_in">Sign in</string>
+    <string name="create_account">Create account</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+</resources>

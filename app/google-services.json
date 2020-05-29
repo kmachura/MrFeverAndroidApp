@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "453523480573",
+    "firebase_url": "https://mrfeverapp.firebaseio.com",
+    "project_id": "mrfeverapp",
+    "storage_bucket": "mrfeverapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453523480573:android:59a6f7ed7d1cec9e49c394",
+        "android_client_info": {
+          "package_name": "com.kmm.mrfeverapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453523480573-72158ej441nq5p10j8u3dpls12p7mjnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr7EYtLh3i_QXvs1negY8xERsP6fgi-JE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453523480573-72158ej441nq5p10j8u3dpls12p7mjnl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
