@@ -10,25 +10,14 @@
         android:id="@+id/pills_panel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/pills_panel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.012"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/pillspanel" />
-
-    <Button
-        android:id="@+id/sign_in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/app_name"
@@ -46,8 +35,9 @@
 
     <ImageView
         android:id="@+id/mini_mr_fever"
-        android:layout_width="103dp"
-        android:layout_height="203dp"
+        android:layout_width="63dp"
+        android:layout_height="139dp"
+        android:contentDescription="@string/mrfever_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.948"
@@ -56,14 +46,164 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/minimrfever" />
 
-    <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="347dp"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/hi_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hi"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.665"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.429"></LinearLayout>
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/hi_user"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <ImageButton
+        android:id="@+id/menu_button1"
+        android:layout_width="87dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/menu_button"
+        app:layout_constraintBottom_toTopOf="@+id/menu_button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pills_panel"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/pill" />
+
+    <ImageButton
+        android:id="@+id/menu_button2"
+        android:layout_width="87dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/menu_button"
+        app:layout_constraintBottom_toTopOf="@+id/menu_button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pills_panel"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/pill" />
+
+    <ImageButton
+        android:id="@+id/menu_button3"
+        android:layout_width="87dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="238dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/menu_button"
+        app:layout_constraintBottom_toTopOf="@+id/menu_button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pills_panel"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/pill" />
+
+    <ImageButton
+        android:id="@+id/menu_button4"
+        android:layout_width="87dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="335dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/menu_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pills_panel"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/pill" />
+
+    <TextView
+        android:id="@+id/menu_item1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/children"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/menu_button1"
+        app:layout_constraintTop_toBottomOf="@+id/pills_panel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/menu_item2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/doctors"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toEndOf="@+id/menu_button2"
+        app:layout_constraintTop_toBottomOf="@+id/menu_item1"
+        app:layout_constraintVertical_bias="0.181" />
+
+    <TextView
+        android:id="@+id/menu_item3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/medicines"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toEndOf="@+id/menu_button3"
+        app:layout_constraintTop_toBottomOf="@+id/menu_item2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/menu_item4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/profile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toEndOf="@+id/menu_button3"
+        app:layout_constraintTop_toBottomOf="@+id/menu_item2"
+        app:layout_constraintVertical_bias="0.313" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

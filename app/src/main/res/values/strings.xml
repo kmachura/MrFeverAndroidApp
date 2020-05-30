@@ -8,4 +8,26 @@
     <string name="last_name">Last name</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
+    <string name="register">Register new user</string>
+    <string name="user_created">User was created.</string>
+    <string name="can_sign_in">You can now sign in.</string>
+    <string name="go_sign_in">go to sign in</string>
+    <string name="forgot_pass">Forgot password?</string>
+    <string name="mrfever_logo">Mr Fever\'s logo</string>
+    <string name="send_forgot_pass">Send password reset email</string>
+    <string name="pills_panel">Pills panel</string>
+    <string name="hi">Hi, </string>
+    <string name="menu_button">Menu button </string>
+    <string name="children">Children profiles</string>
+    <string name="doctors">Doctors\' appointments\' diary</string>
+    <string name="medicines">Medicines</string>
+    <string name="profile">User profile</string>
+    <string name="child_logo">Child\'s logo</string>
+    <string name="add_child">Add a child profile</string>
+    <string name="your_children">Your children</string>
+    <string name="child_name">Child\'s name</string>
+    <string name="child_birthday">Child\'s date of birth</string>
+    <string name="child_sex">Child\'s sex:</string>
+    <string name="child_blood_type">Child\'s blood type</string>
+    <string name="create_child_profile">Create child\'s profile</string>
 </resources>

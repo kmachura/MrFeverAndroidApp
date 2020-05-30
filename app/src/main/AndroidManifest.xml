@@ -11,7 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ForgotPasswordActivity"></activity>
+        <activity android:name=".ChildProfileCreatedActivity"></activity>
+        <activity android:name=".YourChildrenActivity" />
+        <activity android:name=".AddChildActivity" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".DoctorsActivity" />
+        <activity android:name=".ChildrenActivity" />
+        <activity android:name=".MedicineActivity" />
+        <activity android:name=".UserCreatedActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".IndexActivity" />
