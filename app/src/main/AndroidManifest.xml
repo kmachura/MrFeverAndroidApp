@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChildProfileCreatedActivity"></activity>
+        <activity android:name=".AddDoctorsAppointmentActivity"></activity>
+        <activity android:name=".AddMedActivity" />
+        <activity android:name=".ChildProfileActivity" />
+        <activity android:name=".ChildProfileCreatedActivity" />
         <activity android:name=".YourChildrenActivity" />
         <activity android:name=".AddChildActivity" />
         <activity android:name=".UserActivity" />

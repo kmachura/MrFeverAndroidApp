@@ -25,9 +25,18 @@
     <string name="child_logo">Child\'s logo</string>
     <string name="add_child">Add a child profile</string>
     <string name="your_children">Your children</string>
+    <string name="your_children_are">Your children are:</string>
+    <string name="your_children_empty">You do not have any children\' profiles created yet.</string>
     <string name="child_name">Child\'s name</string>
     <string name="child_birthday">Child\'s date of birth</string>
     <string name="child_sex">Child\'s sex:</string>
     <string name="child_blood_type">Child\'s blood type</string>
     <string name="create_child_profile">Create child\'s profile</string>
+    <string name="chp_birthday">Date of birthday:</string>
+    <string name="chp_bloodtype">Blood type:</string>
+    <string name="chp_last_doc_app">Last doctor\'s appointment:</string>
+    <string name="chp_last_med">Last medicine given:</string>
+    <string name="add_med">Add medicine\'s dose:</string>
+    <string name="add_doc_app">Add doctor\'s appointment</string>
+    <string name="avatar">Avatar</string>
 </resources>

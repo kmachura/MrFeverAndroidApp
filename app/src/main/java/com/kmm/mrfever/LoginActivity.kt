@@ -20,8 +20,9 @@ class LoginActivity : AppCompatActivity() {
     private var tvForgotPassword: TextView? = null
     private var etEmail: EditText? = null
     private var etPassword: EditText? = null
-    private var btnLogin: Button? = null
-    private var btnCreateAccount: Button? = null
+    private var loginButton: Button? = null
+    private var createAccountButton: Button? = null
+
     private var mAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,28 +35,23 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-//        val forgotPassButton = findViewById<Button>(R.id.forgot_pass_button)
-//        registerButton.setOnClickListener {
-//            val intent = Intent(this, ForgotPasswordActivity::class.java)
-//            startActivity(intent)
-//        }
-
         initialise()
     }
     private fun initialise() {
-        tvForgotPassword = findViewById<View>(R.id.forgot_pass_button) as TextView
+        tvForgotPassword = findViewById<View>(R.id.forgot_password) as TextView
         etEmail = findViewById<View>(R.id.email) as EditText
         etPassword = findViewById<View>(R.id.password) as EditText
-        btnLogin = findViewById<View>(R.id.sign_in_button) as Button
-        btnCreateAccount = findViewById<View>(R.id.register_button) as Button
+        loginButton = findViewById<View>(R.id.sign_in_button) as Button
+        createAccountButton = findViewById<View>(R.id.register_button) as Button
         mAuth = FirebaseAuth.getInstance()
+
         tvForgotPassword!!
             .setOnClickListener { startActivity(Intent(this@LoginActivity,
                 ForgotPasswordActivity::class.java)) }
-        btnCreateAccount!!
+        createAccountButton!!
             .setOnClickListener { startActivity(Intent(this@LoginActivity,
                 CreateAccountActivity::class.java)) }
-        btnLogin!!.setOnClickListener { loginUser() }
+        loginButton!!.setOnClickListener { loginUser() }
     }
 
     private fun loginUser() {
