@@ -14,6 +14,7 @@
     <string name="go_sign_in">go to sign in</string>
     <string name="forgot_pass">Forgot password?</string>
     <string name="mrfever_logo">Mr Fever\'s logo</string>
+    <string name="doctor_logo">Doctor\'s logo</string>
     <string name="send_forgot_pass">Send password reset email</string>
     <string name="pills_panel">Pills panel</string>
     <string name="hi">Hi, </string>
@@ -39,4 +40,11 @@
     <string name="add_med">Add medicine\'s dose:</string>
     <string name="add_doc_app">Add doctor\'s appointment</string>
     <string name="avatar">Avatar</string>
+    <string name="doctor_name">Doctor\'s name</string>
+    <string name="doc_spec">Specialization</string>
+    <string name="doc_app_date">Date of appointment:</string>
+    <string name="hour">Hour:</string>
+    <string name="doc_rec">Doctor\'s recommendations:</string>
+    <string name="presc_med">Prescribed medicines:</string>
+    <string name="next_app">Next appointment:</string>
 </resources>
