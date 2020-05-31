@@ -12,6 +12,8 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 class CreateAccountActivity : AppCompatActivity() {
 
@@ -31,6 +33,9 @@ class CreateAccountActivity : AppCompatActivity() {
     private var lastName: String? = null
     private var email: String? = null
     private var password: String? = null
+
+    private lateinit var pattern: Pattern
+    private lateinit var matcher: Matcher
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,9 +60,25 @@ class CreateAccountActivity : AppCompatActivity() {
         email = etEmail?.text.toString()
         password = etPassword?.text.toString()
 
-        if (!TextUtils.isEmpty(firstName) && !TextUtils.isEmpty(lastName)
-            && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+        val passwordPattern = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{6,}$"
+        pattern = Pattern.compile(passwordPattern)
+        matcher = pattern.matcher(password)
 
+        if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(this, "Email is in ivalid format. It should be e.g. email@email.com.", Toast.LENGTH_SHORT).show()
+        }
+        else if(!matcher.matches()) {
+            Toast.makeText(
+                this,
+                "Password should be minimum 6 characters length and it should contain capital & small letter, number and special sign.",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        else if (!TextUtils.isEmpty(firstName) && !TextUtils.isEmpty(lastName)
+            && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+            if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Email is in ivalid format. It should be e.g. email@email.com.", Toast.LENGTH_SHORT).show()
+            }
             mAuth!!
                 .createUserWithEmailAndPassword(email!!, password!!)
                 .addOnCompleteListener(this) { task ->

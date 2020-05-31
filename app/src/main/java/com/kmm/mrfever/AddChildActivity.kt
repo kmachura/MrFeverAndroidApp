@@ -11,6 +11,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import android.widget.EditText
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 class AddChildActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
@@ -19,7 +21,6 @@ class AddChildActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
     private var etChildBirthday: EditText? = null
     private var etChildBloodType: EditText? = null
     private var createChildProfile: Button? = null
-
 
     private var mDatabaseReference: DatabaseReference? = null
     private var mDatabase: FirebaseDatabase? = null
@@ -31,6 +32,9 @@ class AddChildActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
     private var childBirthday: String? = null
     private var childBloodType: String? = null
     private var selectedChildSex: String? = null
+
+    private lateinit var pattern: Pattern
+    private lateinit var matcher: Matcher
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,7 +70,18 @@ class AddChildActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         childBirthday = etChildBirthday?.text.toString()
         childBloodType = etChildBloodType?.text.toString()
 
-        if (!TextUtils.isEmpty(childName) && !TextUtils.isEmpty(childBirthday)
+        val birthdayPattern = "^(1[0-9]|0[1-9]|3[0-1]|2[1-9])/(0[1-9]|1[0-2])/[0-9]{4}\$"
+        pattern = Pattern.compile(birthdayPattern)
+        matcher = pattern.matcher(childBirthday)
+
+        if(!matcher.matches()) {
+            Toast.makeText(
+                this,
+                "Date of birth should be provided in format: DD/MM/YYYY.",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        else if (!TextUtils.isEmpty(childName) && !TextUtils.isEmpty(childBirthday)
             && !TextUtils.isEmpty(selectedChildSex)) {
 
             val userId = mAuth!!.currentUser!!.uid
