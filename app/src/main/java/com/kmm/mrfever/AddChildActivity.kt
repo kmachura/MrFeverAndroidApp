@@ -12,16 +12,15 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import android.widget.EditText as TextView
+import android.widget.EditText
 
 class AddChildActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener,
     OnCompleteListener<Void> {
 
     private val paths = arrayOf("girl", "boy", "I do not want to tell")
-    private var etChildName: TextView? = null
-    private var etChildBirthday: TextView? = null
-    private var etChildBloodType: TextView? = null
-    private var childSex: Spinner? = null
+    private var etChildName: EditText? = null
+    private var etChildBirthday: EditText? = null
+    private var etChildBloodType: EditText? = null
     private var createChildProfile: Button? = null
 
     private var mDatabaseReference: DatabaseReference? = null
@@ -33,7 +32,6 @@ class AddChildActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
     private var childName: String? = null
     private var childBirthday: String? = null
     private var childBloodType: String? = null
-    private var tvChildSex: String? = null
     private var selectedChildSex: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
