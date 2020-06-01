@@ -105,7 +105,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/doc_hour_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -120,7 +120,7 @@
         app:layout_constraintVertical_bias="0.002" />
 
     <EditText
-        android:id="@+id/editTextTime"
+        android:id="@+id/doc_app_hour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="129dp"
@@ -134,7 +134,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/doc_hour_title"
         app:layout_constraintTop_toBottomOf="@+id/doc_app_date"
         app:layout_constraintVertical_bias="0.005" />
 
@@ -150,11 +150,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/doc_hour_title"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
+        android:id="@+id/doc_app_rec"
         android:layout_width="376dp"
         android:layout_height="137dp"
         android:layout_marginTop="13dp"
@@ -182,7 +182,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2"
+        app:layout_constraintTop_toBottomOf="@+id/doc_app_rec"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -202,7 +202,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/add_doc_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
