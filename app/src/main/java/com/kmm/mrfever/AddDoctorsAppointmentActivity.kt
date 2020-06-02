@@ -30,7 +30,7 @@ class AddDoctorsAppointmentActivity : AppCompatActivity() {
     private var mDatabase: FirebaseDatabase? = null
     private var mAuth: FirebaseAuth? = null
 
-    private val TAG = "AddDoctorsAppointmentActivity"
+    private val TAG = "AddDoctorsAppointment"
 
     private var docName: String? = null
     private var docSpec: String? = null
@@ -58,9 +58,9 @@ class AddDoctorsAppointmentActivity : AppCompatActivity() {
         etDocAppRec = findViewById<View>(R.id.doc_app_rec) as EditText
         etNextDocApp = findViewById<View>(R.id.next_doc_app) as EditText
         etPrescMed = findViewById<View>(R.id.presc_med) as EditText
-        addDocAppButton = findViewById<View>(R.id.add_doc_app_button) as Button
+        addDocAppButton = findViewById<View>(R.id.add_doc_app) as Button
         mDatabase = FirebaseDatabase.getInstance()
-        mDatabaseReference = mDatabase!!.reference.child("Children")
+        mDatabaseReference = mDatabase!!.reference.child("Doctors")
         mAuth = FirebaseAuth.getInstance()
         addDocAppButton!!.setOnClickListener { addDoctorsAppointment() }
     }
@@ -93,13 +93,13 @@ class AddDoctorsAppointmentActivity : AppCompatActivity() {
                 ?.child(userId)?.push()?.setValue(addedDoctorsAppointment)
                 ?.addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        Log.d(TAG, "Added appointment:success")
+                        Log.d(TAG, "Add Doctor's appointment: success")
                         Toast.makeText(this@AddDoctorsAppointmentActivity,
                             "Doctor's appointment ",
                             Toast.LENGTH_SHORT).show()
                         updateUserInfoAndUI()
                     } else {
-                        Log.w(TAG, "Added appointment:failure", task.exception)
+                        Log.w(TAG, "Add Doctor's Appointment:failure", task.exception)
                         Toast.makeText(this@AddDoctorsAppointmentActivity, "Adding the doctors' appointment failed.",
                             Toast.LENGTH_SHORT).show()
                     }
