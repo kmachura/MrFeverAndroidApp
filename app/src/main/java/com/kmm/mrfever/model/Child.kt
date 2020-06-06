@@ -1,4 +1,4 @@
-package com.kmm.mrfever
+package com.kmm.mrfever.model
 
 import com.google.firebase.database.IgnoreExtraProperties
 
