@@ -3,6 +3,7 @@ package com.kmm.mrfever.di.component
 import com.kmm.mrfever.base.BaseView
 import com.kmm.mrfever.di.module.ContextModule
 import com.kmm.mrfever.views.children.AddChildPresenter
+import com.kmm.mrfever.views.main.MainPresenter
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -19,6 +20,8 @@ interface PresenterInjector {
      * @param addChildPresenter AddChildPresenter in which to inject the dependencies
      */
     fun inject(addChildPresenter: AddChildPresenter)
+
+    fun inject(mainPresenter: MainPresenter)
 
     @Component.Builder
     interface Builder {

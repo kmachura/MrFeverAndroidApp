@@ -3,6 +3,7 @@ package com.kmm.mrfever.di.component;
 import com.kmm.mrfever.base.BaseView;
 import com.kmm.mrfever.di.module.ContextModule;
 import com.kmm.mrfever.views.children.AddChildPresenter;
+import com.kmm.mrfever.views.main.MainPresenter;
 import dagger.internal.Preconditions;
 import javax.annotation.Generated;
 
@@ -21,6 +22,10 @@ public final class DaggerPresenterInjector implements PresenterInjector {
 
   @Override
   public void inject(AddChildPresenter addChildPresenter) {
+  }
+
+  @Override
+  public void inject(MainPresenter mainPresenter) {
   }
 
   private static final class Builder implements PresenterInjector.Builder {

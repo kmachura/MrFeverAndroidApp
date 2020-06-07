@@ -4,6 +4,7 @@ import com.kmm.mrfever.di.component.DaggerPresenterInjector
 import com.kmm.mrfever.di.component.PresenterInjector
 import com.kmm.mrfever.di.module.ContextModule
 import com.kmm.mrfever.views.children.AddChildPresenter
+import com.kmm.mrfever.views.main.MainPresenter
 
 /**
  * Base presenter that must be implemented by any other presenter. Provides initial injections and required methods.
@@ -39,6 +40,7 @@ abstract class BasePresenter<out V : BaseView>(protected val view: V) {
     private fun inject() {
         when (this) {
             is AddChildPresenter -> injector.inject(this)
+            is MainPresenter -> injector.inject(this)
         }
     }
 }
