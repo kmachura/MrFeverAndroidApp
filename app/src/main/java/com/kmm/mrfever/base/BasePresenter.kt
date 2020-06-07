@@ -1,5 +1,6 @@
 package com.kmm.mrfever.base
 
+import com.kmm.mrfever.di.component.DaggerPresenterInjector
 import com.kmm.mrfever.di.component.PresenterInjector
 import com.kmm.mrfever.di.module.ContextModule
 import com.kmm.mrfever.views.children.AddChildPresenter

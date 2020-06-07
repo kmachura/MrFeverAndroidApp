@@ -7,36 +7,32 @@ import dagger.internal.Preconditions;
 import javax.annotation.Generated;
 
 @Generated(
-  value = "dagger.internal.codegen.ComponentProcessor",
-  comments = "https://google.github.io/dagger"
+    value = "dagger.internal.codegen.ComponentProcessor",
+    comments = "https://dagger.dev"
 )
 public final class DaggerPresenterInjector implements PresenterInjector {
-  private DaggerPresenterInjector(Builder builder) {}
+  private DaggerPresenterInjector(BaseView baseView) {
+
+  }
 
   public static PresenterInjector.Builder builder() {
     return new Builder();
   }
 
   @Override
-  public void inject(AddChildPresenter addChildPresenter) {}
+  public void inject(AddChildPresenter addChildPresenter) {
+  }
 
   private static final class Builder implements PresenterInjector.Builder {
     private BaseView baseView;
 
-    @Override
-    public PresenterInjector build() {
-      if (baseView == null) {
-        throw new IllegalStateException(BaseView.class.getCanonicalName() + " must be set");
-      }
-      return new DaggerPresenterInjector(this);
-    }
-
     /**
-     * This module is declared, but an instance is not used in the component. This method is a
-     * no-op. For more, see https://google.github.io/dagger/unused-modules.
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
      */
     @Override
+    @Deprecated
     public Builder contextModule(ContextModule contextModule) {
+      Preconditions.checkNotNull(contextModule);
       return this;
     }
 
@@ -44,6 +40,12 @@ public final class DaggerPresenterInjector implements PresenterInjector {
     public Builder baseView(BaseView baseView) {
       this.baseView = Preconditions.checkNotNull(baseView);
       return this;
+    }
+
+    @Override
+    public PresenterInjector build() {
+      Preconditions.checkBuilderRequirement(baseView, BaseView.class);
+      return new DaggerPresenterInjector(baseView);
     }
   }
 }

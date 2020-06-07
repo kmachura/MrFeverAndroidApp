@@ -8,11 +8,10 @@ import javax.annotation.Generated;
 import javax.inject.Provider;
 
 @Generated(
-  value = "dagger.internal.codegen.ComponentProcessor",
-  comments = "https://google.github.io/dagger"
+    value = "dagger.internal.codegen.ComponentProcessor",
+    comments = "https://dagger.dev"
 )
-public final class ContextModule_ProvideApplication$app_releaseFactory
-    implements Factory<Application> {
+public final class ContextModule_ProvideApplication$app_releaseFactory implements Factory<Application> {
   private final Provider<Context> contextProvider;
 
   public ContextModule_ProvideApplication$app_releaseFactory(Provider<Context> contextProvider) {
@@ -21,9 +20,7 @@ public final class ContextModule_ProvideApplication$app_releaseFactory
 
   @Override
   public Application get() {
-    return Preconditions.checkNotNull(
-        ContextModule.provideApplication$app_release(contextProvider.get()),
-        "Cannot return null from a non-@Nullable @Provides method");
+    return provideApplication$app_release(contextProvider.get());
   }
 
   public static ContextModule_ProvideApplication$app_releaseFactory create(
@@ -31,9 +28,7 @@ public final class ContextModule_ProvideApplication$app_releaseFactory
     return new ContextModule_ProvideApplication$app_releaseFactory(contextProvider);
   }
 
-  public static Application proxyProvideApplication$app_release(Context context) {
-    return Preconditions.checkNotNull(
-        ContextModule.provideApplication$app_release(context),
-        "Cannot return null from a non-@Nullable @Provides method");
+  public static Application provideApplication$app_release(Context context) {
+    return Preconditions.checkNotNull(ContextModule.provideApplication$app_release(context), "Cannot return null from a non-@Nullable @Provides method");
   }
 }
