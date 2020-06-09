@@ -27,7 +27,7 @@
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".IndexActivity" />
+        <activity android:name=".views.index.IndexActivity" />
         <activity android:name=".views.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
