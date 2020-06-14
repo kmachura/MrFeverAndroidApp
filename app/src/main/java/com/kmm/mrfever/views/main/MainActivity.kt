@@ -1,16 +1,20 @@
 package com.kmm.mrfever.views.main
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.kmm.mrfever.LoginActivity
 import com.kmm.mrfever.R
-import com.kmm.mrfever.base.BaseActivity
+import com.kmm.mrfever.MrFeverApplication
+import javax.inject.Inject
 
-class MainActivity : BaseActivity<MainPresenter>(), MainView {
+class MainActivity : AppCompatActivity(), MainView {
+
+   @Inject lateinit var presenter: MainPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        (application as MrFeverApplication).component.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -23,10 +27,6 @@ class MainActivity : BaseActivity<MainPresenter>(), MainView {
 
     override fun navigateTo(target: Class<*>) {
         startActivity(Intent(this, target))
-    }
-
-    override fun instantiatePresenter(): MainPresenter {
-        return MainPresenter(this)
     }
 
 }

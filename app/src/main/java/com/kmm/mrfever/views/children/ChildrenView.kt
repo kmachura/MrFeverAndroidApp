@@ -1,12 +1,11 @@
 package com.kmm.mrfever.views.children
 
-import com.kmm.mrfever.base.BaseView
 import com.kmm.mrfever.model.Child
 
 /*
 Interface providing required method for a view displaying children
  */
-interface ChildrenView : BaseView {
+interface ChildrenView {
 
     /*
      * Updating list of children by the added one

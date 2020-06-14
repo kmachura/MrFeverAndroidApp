@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import android.widget.EditText
+import com.kmm.mrfever.model.Child
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -85,7 +86,13 @@ class AddChildActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
             && !TextUtils.isEmpty(selectedChildSex)) {
 
             val userId = mAuth!!.currentUser!!.uid
-            val createdChild = Child(childName, childBirthday, childBloodType, selectedChildSex, userId)
+            val createdChild = Child(
+                childName,
+                childBirthday,
+                childBloodType,
+                selectedChildSex,
+                userId
+            )
             mDatabaseReference
                 ?.child(userId)?.push()?.setValue(createdChild)
                 ?.addOnCompleteListener(this) { task ->

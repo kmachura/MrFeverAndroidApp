@@ -1,13 +1,11 @@
 package com.kmm.mrfever.views.children
 
-import com.kmm.mrfever.base.BaseView
-import com.kmm.mrfever.model.Child
 import com.kmm.mrfever.model.DoctorsAppointment
 
 /*
 Interface providing required method for a view displaying doctors' appointment details
  */
-interface DoctorsAppointmentView : BaseView {
+interface DoctorsAppointmentView {
 
     /*
      * Updating details about doctors' appointment viewed

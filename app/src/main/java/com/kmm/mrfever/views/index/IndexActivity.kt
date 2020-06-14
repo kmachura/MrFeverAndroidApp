@@ -3,17 +3,13 @@ package com.kmm.mrfever.views.index
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
-import com.kmm.mrfever.*
+import com.kmm.mrfever.MrFeverApplication
 import com.kmm.mrfever.R
-import com.kmm.mrfever.base.BaseActivity
-import com.kmm.mrfever.views.main.MainPresenter
+import javax.inject.Inject
 
-class IndexActivity : BaseActivity<IndexPresenter>(), IndexView {
+class IndexActivity : AppCompatActivity(), IndexView {
 
 //   TODO: ("implement in a MVP way")
 //    private var mDatabaseReference: DatabaseReference? = null
@@ -21,9 +17,14 @@ class IndexActivity : BaseActivity<IndexPresenter>(), IndexView {
 //    private var mAuth: FirebaseAuth? = null
 //    private var tvFirstName: TextView? = null
 
+    @Inject
+    lateinit var presenter: IndexPresenter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_index)
+
+        (application as MrFeverApplication).component.inject(this)
 
         val menuButton1 = findViewById<ImageButton>(R.id.menu_button1)
         menuButton1.setOnClickListener{
@@ -88,10 +89,6 @@ class IndexActivity : BaseActivity<IndexPresenter>(), IndexView {
 
     override fun navigateTo(target: Class<*>) {
         startActivity(Intent(this, target))
-    }
-
-    override fun instantiatePresenter(): IndexPresenter {
-        return IndexPresenter(this)
     }
 
 }

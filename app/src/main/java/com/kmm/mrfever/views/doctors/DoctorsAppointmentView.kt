@@ -1,12 +1,11 @@
 package com.kmm.mrfever.views.doctors
 
-import com.kmm.mrfever.base.BaseView
 import com.kmm.mrfever.model.Child
 
 /*
 Interface providing required method for a view displaying child's profile
  */
-interface ChildProfileView : BaseView {
+interface ChildProfileView {
 
     /*
      * Updating details about child viewed in its profile

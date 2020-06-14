@@ -12,6 +12,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.kmm.mrfever.model.DoctorsAppointment
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -88,7 +89,17 @@ class AddDoctorsAppointmentActivity : AppCompatActivity() {
         else if (!TextUtils.isEmpty(docName) && !TextUtils.isEmpty(docAppDate)) {
 
             val userId = mAuth!!.currentUser!!.uid
-            val addedDoctorsAppointment = DoctorsAppointment (docName, docSpec, docAppDate, docAppHour, docAppRec, nextDocApp, prescMed, userId)
+            val addedDoctorsAppointment =
+                DoctorsAppointment(
+                    docName,
+                    docSpec,
+                    docAppDate,
+                    docAppHour,
+                    docAppRec,
+                    nextDocApp,
+                    prescMed,
+                    userId
+                )
             mDatabaseReference
                 ?.child(userId)?.push()?.setValue(addedDoctorsAppointment)
                 ?.addOnCompleteListener(this) { task ->

@@ -1,12 +1,11 @@
 package com.kmm.mrfever.views.doctors
 
-import com.kmm.mrfever.base.BaseView
 import com.kmm.mrfever.model.DoctorsAppointment
 
 /*
 Interface providing required method for a view adding a child profile
  */
-interface AddDoctorsAppointmentView : BaseView {
+interface AddDoctorsAppointmentView {
 
     /*
      * Adding doctors' appointment for a current chosen user's child

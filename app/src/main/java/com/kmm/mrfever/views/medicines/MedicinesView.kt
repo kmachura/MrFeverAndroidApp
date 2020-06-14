@@ -1,13 +1,12 @@
 package com.kmm.mrfever.views.medicines
 
-import com.kmm.mrfever.base.BaseView
 import com.kmm.mrfever.model.Child
 import com.kmm.mrfever.model.MedicineDose
 
 /*
 Interface providing required method for a view displaying medicines given for a child after selecting the child
  */
-interface MedicinesView : BaseView {
+interface MedicinesView {
 
     /*
      * Updating list of medicines given for selected child by the added one

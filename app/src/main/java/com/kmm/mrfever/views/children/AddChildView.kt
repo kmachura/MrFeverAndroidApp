@@ -1,12 +1,11 @@
 package com.kmm.mrfever.views.children
 
-import com.kmm.mrfever.base.BaseView
 import com.kmm.mrfever.model.Child
 
 /*
 Interface providing required method for a view adding a child profile
  */
-interface AddChildView : BaseView {
+interface AddChildView {
 
     /*
      * Adding child for a current user

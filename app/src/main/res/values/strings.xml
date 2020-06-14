@@ -47,4 +47,6 @@
     <string name="doc_rec">Doctor\'s recommendations:</string>
     <string name="presc_med">Prescribed medicines:</string>
     <string name="next_app">Next appointment:</string>
+    <string name="email_error">Your e-mail is invalid.</string>
+    <string name="password_error">Your password is too short. It\'s length has to be minimum 6 characters.</string>
 </resources>

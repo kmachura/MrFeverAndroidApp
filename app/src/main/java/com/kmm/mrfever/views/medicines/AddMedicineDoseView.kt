@@ -1,12 +1,11 @@
 package com.kmm.mrfever.views.medicines
 
-import com.kmm.mrfever.base.BaseView
 import com.kmm.mrfever.model.MedicineDose
 
 /*
 Interface providing required method for a view adding a medicine dose
  */
-interface AddMedicineDoseView : BaseView {
+interface AddMedicineDoseView {
 
     /*
      * Adding medicine's dose for a current chosen user's child

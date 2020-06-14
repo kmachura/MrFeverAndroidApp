@@ -10,7 +10,7 @@
     android:clickable="true"
     android:fadingEdge="horizontal|vertical|none"
     android:scrollbarTrackVertical="@color/fui_bgGoogle"
-    tools:context="com.kmm.mrfever.LoginActivity"
+    tools:context="com.kmm.mrfever.views.login.LoginActivity"
     android:focusable="true">
 
     <EditText

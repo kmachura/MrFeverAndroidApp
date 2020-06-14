@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.kmm.mrfever.model.Child
 
 class ChildProfileActivity : AppCompatActivity() {
 

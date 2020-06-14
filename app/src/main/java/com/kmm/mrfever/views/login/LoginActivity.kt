@@ -1,4 +1,4 @@
-package com.kmm.mrfever
+package com.kmm.mrfever.views.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +11,10 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.kmm.mrfever.ForgotPasswordActivity
+import com.kmm.mrfever.R
+//import com.kmm.mrfever.views.createaccount.CreateAccountActivity
+//import com.kmm.mrfever.views.index.IndexActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -31,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
 
         val registerButton = findViewById<Button>(R.id.register_button)
         registerButton.setOnClickListener {
-            val intent = Intent(this, CreateAccountActivity::class.java)
+      //      val intent = Intent(this, CreateAccountActivity::class.java)
             startActivity(intent)
         }
 
@@ -48,9 +52,9 @@ class LoginActivity : AppCompatActivity() {
         tvForgotPassword!!
             .setOnClickListener { startActivity(Intent(this@LoginActivity,
                 ForgotPasswordActivity::class.java)) }
-        createAccountButton!!
-            .setOnClickListener { startActivity(Intent(this@LoginActivity,
-                CreateAccountActivity::class.java)) }
+ //       createAccountButton!!
+ //           .setOnClickListener { startActivity(Intent(this@LoginActivity,
+//                CreateAccountActivity::class.java)) }
         loginButton!!.setOnClickListener { loginUser() }
     }
 
@@ -78,7 +82,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun updateUI() {
-        val intent = Intent(this@LoginActivity, IndexActivity::class.java)
+      //  val intent = Intent(this@LoginActivity, IndexActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
